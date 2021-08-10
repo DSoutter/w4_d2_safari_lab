@@ -17,10 +17,19 @@ def add_employee(employee):
     employee.id = id
     return employee
 
-# List all staff
+# List all employees
+def list_employees():
+    employees = []
+    
+    sql = "SELECT * FROM employees"
+    results = run_sql(sql)
 
+    for row in results:
+        employee = Employee(row['name'], row['start_date'], row['department'], row['performance'])
+        employees.append(employee)
+    return employees
 
-# Find a specific member of staff
+# Find a specific member of employees
 
 
 # Remove a member of staff
