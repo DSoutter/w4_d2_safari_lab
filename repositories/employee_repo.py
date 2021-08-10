@@ -2,7 +2,7 @@ from pdb import run
 from db.run_sql import run_sql
 
 from models.employee import Employee
-import repositories.employee_repo as employee_repo
+from models.animal import Animal
 
 # Add a delete all method
 def delete_all():
