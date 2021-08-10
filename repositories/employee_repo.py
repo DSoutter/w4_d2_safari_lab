@@ -1,3 +1,4 @@
+from pdb import run
 from db.run_sql import run_sql
 
 from models.employee import Employee
@@ -41,7 +42,11 @@ def find_employee(id):
     return employee
 
 # Remove a member of staff
-
+def delete(id):
+    sql="DELETE FROM employees WHERE id = %s"
+    values= [id]
+    run_sql(sql, values)
+    
 
 # Update a member of staff
 
