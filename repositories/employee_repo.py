@@ -49,4 +49,9 @@ def delete(id):
     
 
 # Update a member of staff
+def update(employee):
+    sql = "UPDATE employees SET (name, start_date, department, performance) = (%s, %s, %s, %s) WHERE id = %s"
+    values = [employee.name, employee.start_date, employee.department, employee.performance, employee.id]
+    run_sql(sql, values)
+    
 
