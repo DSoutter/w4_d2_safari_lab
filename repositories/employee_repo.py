@@ -1,7 +1,7 @@
 from db.run_sql import run_sql
 
 from models.employee import Employee
-# import repositories.user_repository as user_repository
+import repositories.employee_repo as employee_repo
 
 # Add a delete all method
 def delete_all():
@@ -30,7 +30,15 @@ def list_employees():
     return employees
 
 # Find a specific member of employees
+def find_employee(id):
+    employee = None
+    sql = "SELECT * FROM employees WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
 
+    if result is not None:
+        employee = Employee(result['name'], result['start_date'], result['department'], result['performance'])
+    return employee
 
 # Remove a member of staff
 
