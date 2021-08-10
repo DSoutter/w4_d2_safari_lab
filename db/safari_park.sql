@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS staff;
+DROP TABLE IF EXISTS employees;
 
-CREATE TABLE staff(
+CREATE TABLE employees(
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     start_date VARCHAR(255),
