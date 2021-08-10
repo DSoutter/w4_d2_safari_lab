@@ -10,7 +10,7 @@ employee1= Employee("Frank", "11/08/2021", "Bird Keeper", 5)
 employee2= Employee("Morty","09/08/2021", "Apiary", 1, 10)
 # employee_repo.add_employee(employee1)
 
-animal1 = Animal("Sergei", "Bear")
+animal1 = Animal("Bruce", "Shark")
 animals_repo.add_animal(animal1)
 # employee_repo.list_employees()
 
